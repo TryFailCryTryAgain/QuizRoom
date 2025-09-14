@@ -1,0 +1,81 @@
+.settings-container {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  
+  .settings-bar {
+    margin-bottom: 2rem;
+    
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #333;
+    }
+    
+    .radio-options {
+      display: flex;
+      gap: 1rem;
+      
+      .input-styling {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.8rem 1.5rem;
+        border: 2px solid #d1d5db;
+        border-radius: 6px;
+        background-color: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        
+        &:hover {
+          border-color: #4b6cb7;
+        }
+        
+        &.checked {
+          background-color: #4b6cb7;
+          color: white;
+          border-color: #4b6cb7;
+        }
+      }
+    }
+    
+    &.empty {
+      margin-bottom: 0;
+      
+      button {
+        width: 100%;
+        background-color: #ECA257;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 1rem 1.2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          background-color: hsl(from #ECA257 h s 70);
+          transform: translateY(-2px);
+        }
+        
+        &:active {
+          background-color: hsl(from #ECA257 h s 50);
+          transform: translateY(2px);
+        }
+      }
+    }
+  }
+}
+
+.hidden {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
